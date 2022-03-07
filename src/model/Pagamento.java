@@ -2,23 +2,24 @@ package model;
 
 
 
-public class Pagamento {
+public class Pagamento {    //cartao de credito pra pagamento
 	
-	private String nomeroDoCartao;
-	private String  nomeImpresso;
-	private String dataDevalidacao;
-	private int codigoDeSeguranca;
-	private double dinheiro;
+	private String nomeroDoCartao;       //numero do cartao
+	private String  nomeImpresso;           //nome impresso
+	private String dataDevalidacao;         //data de validacao
+	private int codigoDeSeguranca;            //codigodeseguranca
+
 	
 	public Pagamento() {}
-	public Pagamento(String nomeroDoCartao,String  nomeImpresso,String dataDevalidacao,int codigoDeSeguranca,double dinheiro) {
+	public Pagamento(String nomeroDoCartao,String  nomeImpresso,String dataDevalidacao,int codigoDeSeguranca) {       //constructor
 		this.nomeroDoCartao = nomeroDoCartao;
 		this.nomeImpresso = nomeImpresso;
 		this.dataDevalidacao = dataDevalidacao;
 		this.codigoDeSeguranca = codigoDeSeguranca;
-		this.dinheiro = dinheiro;
+		
 		
 	}
+	//setter and getter
 	
 	public String getNomeroDoCartao() {
 		return nomeroDoCartao;
@@ -44,12 +45,7 @@ public class Pagamento {
 	public void setCodigoDeSeguranca(int codigoDeSeguranca) {
 		this.codigoDeSeguranca = codigoDeSeguranca;
 	}
-	public double getDinheiro() {
-		return dinheiro;
-	}
-	public void setDinheiro(double dinheiro) {
-		this.dinheiro = dinheiro;
-	}
+	
 	
 	
 	
@@ -57,7 +53,7 @@ public class Pagamento {
 
 	
 	public String toString() {
-		return getNomeroDoCartao()+","+getNomeImpresso()+","+getDataDevalidacao()+","+getCodigoDeSeguranca()+","+getDinheiro();
+		return getNomeroDoCartao()+","+getNomeImpresso()+","+getDataDevalidacao()+","+getCodigoDeSeguranca();
 		
 	}
 	

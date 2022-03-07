@@ -4,13 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Client extends Pessoa {
-	private Pagamento pagamento;
+	
 
-	public Client(String nome, String data, String cpf, String email, String senha, Pagamento pagamento) {
-		super(nome, data, cpf, email, senha);
-		
-		this.pagamento = pagamento;
-	}
+
 	
 	public Client(String nome, String data, String cpf, String email, String senha) {
 		super(nome, data, cpf, email, senha);
@@ -26,20 +22,14 @@ public class Client extends Pessoa {
 	public Client() {
 	}
 	
-	public Pagamento getPagamento() {
-		return pagamento;
-	
-	}
-	public void setPagamento(Pagamento pagamento) {
-		 this.pagamento = pagamento;
-	
+
 	}
 	
 	
 	
 	// @Override
 	    public void buscar(String name) {
-	        // return arraylist of client
+	       
 	    }
 
 	  //  @Override
@@ -57,10 +47,7 @@ public class Client extends Pessoa {
 	        // null
 	    }
 	    
-	    public void IsPagamentoregister() {
-	    //null
-	    }
-	    
+	   
 	    
 	    public String toString() {
 	        return "Cliente: " 
@@ -76,9 +63,9 @@ public class Client extends Pessoa {
 	            + getEmail() + "\n"
 	            + "\n" 
 	            + "Senha: " 
-	            + getSenha() + "\n"
-	            + "\n"
-	            + getPagamento();
+	            + getSenha() + "\n";
+	           
+	          
 	            
 	            	    }
 	 

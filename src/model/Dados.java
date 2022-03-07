@@ -17,13 +17,13 @@ public abstract class Dados {
         
     public static void start() {
     	
-    Pagamento p = new Pagamento("13","fd0000fsd","11/25",454 ,5);
+    
     		
     Admin admin = new Admin("admin", "admin");
     admins.add(admin);
     
     Client client1 = new Client("a","bfdsf","bfd","v","dgfc");
-    Client client2 = new Client("adfds","b","bfgfd","dfgv","cdgf",p);
+    Client client2 = new Client("adfds","b","bfgfd","dfgv","cdgf");
     Client client3 = new Client("basic","b","dfgb","dfgv","dgfc");
     Client client4 = new Client("pillow","b","gdfgb","fdgv","dfgc");
     Client client5 = new Client("gown","b","bgdf","dgfv","cdfg");
@@ -35,8 +35,7 @@ public abstract class Dados {
     clientes.add(client4);
     clientes.add(client5);
     clientes.add(client6);
-    client1.setPagamento(p);
-	client1.getPagamento().setDinheiro(100);
+  
 
 
     
@@ -50,21 +49,7 @@ public abstract class Dados {
     cars.add(car2);
     cars.add(car3);
     cars.add(car4);
-    
-    	boolean a = false ;
-    for (Client c : clientes) {
-    	try{if(!c.getPagamento().equals(null)) {
-    		a= true;
-    		System.out.print(a);
-    		                                                          //testando  para verificar se tem usaurio tem pagamento registrado.
-    	}}catch(Exception e) {
-    		a=false;
-    		System.out.print(a);
-    	}
-    	if(a==true) {
-    		System.out.print(c.getPagamento()+"\n");
-    	}
-    }
+
 
     }
 
@@ -115,6 +100,25 @@ public abstract class Dados {
     private static boolean nomeESenhaIguaisCliente(Client cliente, Client clienteProcura) {
         return cliente.getNome().equals(clienteProcura.getNome()) && cliente.getSenha().equals(clienteProcura.getSenha());
     }
+    
+    public static List<Client> selecionaTudo() {
+        return Dados.getClientes();
+    }
+    
+    //admin
+    
+    public static Admin buscarAdmin(Admin admin) {
+        for (Admin a : Dados.getAdmin()) {
+            if (nomeESenhaIguaisAdmin(a, admin)) {                   //a referindo cada objeto admin in array
+                return a;
+            }
+        }
+
+        return null;
+    }
+        private static boolean nomeESenhaIguaisAdmin(Admin admin, Admin adminProcura) {
+            return admin.getNome().equals(adminProcura.getNome()) && admin.getSenha().equals(adminProcura.getSenha());
+        }
     
   
     

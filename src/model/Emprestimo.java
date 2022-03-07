@@ -35,12 +35,12 @@ public class Emprestimo {
 	}
 	
 	
-	public void localdeDevolver() {
-		
+	public void localdeDevolver() {          
+		//null
 	}
 	
 	public void localderetirada() {
-		
+		//null
 	}
 
 }

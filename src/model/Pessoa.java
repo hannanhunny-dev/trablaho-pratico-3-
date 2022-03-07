@@ -2,12 +2,14 @@ package model;
 
 public abstract class Pessoa {
 
-	private String nome;
-	private String dataDeNascimento;
-	private String cpf;
-	private String email;
-	private String senha;
+	private String nome;           //nome da pessoa
+	private String dataDeNascimento;   //data de nascimento
+	private String cpf;                  //cpf
+	private String email;                 //email do usario
+	private String senha;                    //senha do usuario
 
+	
+	//contructor protected para so os subclasses podem accesar 
 	protected Pessoa(String nome, String dataDeNascimento, String cpf, String email, String senha) {
 		this.nome = nome;
 		this.dataDeNascimento = dataDeNascimento;
@@ -16,12 +18,12 @@ public abstract class Pessoa {
 		this.senha = senha;
 	}
 
-	protected Pessoa(String nome, String senha) { // vai devolver nome e senha do usaurio
+	protected Pessoa(String nome, String senha) { // constructor no caso se apenas novo usario e feito por apenas nome e senha
 		this.nome = nome;
 		this.senha = senha;
 	}
 
-	protected Pessoa() {
+	protected Pessoa() {                //constructor default 
 
 	}
 

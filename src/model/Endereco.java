@@ -1,7 +1,7 @@
 package model;
 
 public class Endereco {
-	private String logradouro;
+	private String logradouro; 
 	private String complemento;
 	private String cep;
 	private String  cidade;
@@ -47,5 +47,7 @@ public class Endereco {
 	public void setPontodeReferencia(String pontodeReferencia) {
 		this.pontodeReferencia = pontodeReferencia;
 	}
+	
+	
 
 }
